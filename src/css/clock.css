@@ -14,3 +14,7 @@
 .clock > .time > * {
   color: var(--color-text-primary);
 }
+
+.clock > .time > #clock-second {
+  opacity: .75;
+}
