@@ -1,0 +1,11 @@
+.highlight {
+  --highlight-radius: 300px;
+  position: fixed;
+  left: calc(var(--mouse-x) * 1px - var(--highlight-radius));
+  top: calc(var(--mouse-y) * 1px - var(--highlight-radius));
+  width: calc(var(--highlight-radius) * 2);
+  height: calc(var(--highlight-radius) * 2);
+  border-radius: var(--highlight-radius);
+  background-image: radial-gradient(#fff2, #fff0);
+  filter: blur(80px);
+}
