@@ -1,1 +1,5 @@
-setInterval(updateClocks, 1000)
+updateClocks()
+
+var intervals = {
+    clock: setInterval(updateClocks, 1000)
+}

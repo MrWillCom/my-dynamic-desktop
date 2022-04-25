@@ -1,6 +1,8 @@
 :root {
   user-select: none;
   font-family: "JetBrains Mono";
+  background-color: var(--color-background-primary);
+  color: var(--color-text-primary);
 }
 
 body {
@@ -9,4 +11,5 @@ body {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
+  background-color: var(--color-background-primary);
 }

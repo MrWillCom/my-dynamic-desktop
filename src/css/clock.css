@@ -4,8 +4,13 @@
   top: 360px;
 }
 
-.clock > #clock {
+.clock > .time {
   line-height: 60px;
   font-size: 60px;
   margin: 0;
+  color: var(--color-text-secondary);
+}
+
+.clock > .time > * {
+  color: var(--color-text-primary);
 }

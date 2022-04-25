@@ -1,8 +1,15 @@
 const updateClocks = () => {
-    document.querySelectorAll('#clock').forEach((el) => {
+    document.querySelectorAll('#clock-hour').forEach((el) => {
         const current = new Date()
-        el.innerHTML = el.getAttribute('format')
-            .replace('%h', '<span class="hour">' + current.getHours() + '</span>')
-            .replace('%m', '<span class="minute">' + current.getMinutes() + '</span>')
+        if (el.innerHTML != current.getHours()) {
+            el.innerHTML = current.getHours()
+        }
+    })
+    document.querySelectorAll('#clock-minute').forEach((el) => {
+        const current = new Date()
+        const minute = current.getMinutes() < 10 ? '0' + current.getMinutes() : current.getMinutes().toString()
+        if (el.innerHTML != minute) {
+            el.innerHTML = minute
+        }
     })
 }
