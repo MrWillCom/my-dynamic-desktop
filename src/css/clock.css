@@ -1,0 +1,11 @@
+.clock {
+  position: fixed;
+  right: 240px;
+  top: 360px;
+}
+
+.clock > #clock {
+  line-height: 60px;
+  font-size: 60px;
+  margin: 0;
+}
