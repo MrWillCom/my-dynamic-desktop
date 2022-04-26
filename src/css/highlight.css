@@ -6,6 +6,6 @@
   width: calc(var(--highlight-radius) * 2);
   height: calc(var(--highlight-radius) * 2);
   border-radius: var(--highlight-radius);
-  background-image: radial-gradient(#fff2, #fff0);
+  background-image: var(--background-mouse-highlight);
   filter: blur(80px);
 }
