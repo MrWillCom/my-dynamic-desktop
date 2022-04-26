@@ -1,0 +1,33 @@
+.indicators {
+  position: fixed;
+  left: 240px;
+  top: 360px;
+}
+
+.indicators > .indicator {
+  text-align: center;
+  border-radius: 8px;
+  border: 1px solid var(--color-border-primary);
+  width: 120px;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.indicators > .indicator:hover {
+  background-color: var(--background-indicator-hover);
+}
+
+.indicators > .indicator > * {
+  margin: 0;
+}
+
+.indicators > .indicator > .value {
+  font-size: 30px;
+}
+
+.indicators > .indicator > .label {
+  font-size: 12px;
+}
