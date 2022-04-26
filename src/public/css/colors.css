@@ -5,6 +5,7 @@
   --color-border-primary: #8882;
   --background-mouse-highlight: radial-gradient(#8882, #8880);
   --background-indicator-hover: #fff4;
+  --background-indicator-active: #fff2;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -15,5 +16,6 @@
     --color-border-primary: #8882;
     --background-mouse-highlight: radial-gradient(#fff2, #fff0);
     --background-indicator-hover: #8881;
+    --background-indicator-active: #8882;
   }
 }

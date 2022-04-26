@@ -20,6 +20,10 @@
   background-color: var(--background-indicator-hover);
 }
 
+.indicators > .indicator:active {
+  background-color: var(--background-indicator-active);
+}
+
 .indicators > .indicator > * {
   margin: 0;
 }

@@ -34,7 +34,7 @@ export default async (req, res) => {
 
     if (response.ok === false) {
         const text = await response.text()
-        console.log(logPrefix.error + text)
+        console.log(logPrefix.time() + logPrefix.error + text)
         console.error(new Error(text))
         return;
     }
@@ -43,11 +43,11 @@ export default async (req, res) => {
 
     if (json.errors != null) {
         const message = json.errors[0].message
-        console.log(logPrefix.error + message)
+        console.log(logPrefix.time() + logPrefix.error + message)
         console.error(new Error(message))
         return;
     }
 
     res.send(JSON.stringify(json.data))
-    console.log(logPrefix.success + ' ' + req.path)
+    console.log(`${logPrefix.time()} ${logPrefix.success} ${logPrefix.methods.get} ${req.path}`)
 }
