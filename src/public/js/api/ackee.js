@@ -1,37 +1,39 @@
 const updateAckeeAPI = async () => {
-    var viewsToday
+    var facts = {
+        activeVisitors: '-',
+        averageViews: '-',
+        averageDuration: '-',
+        viewsToday: '-',
+        viewsMonth: '-',
+        viewsYear: '-',
+    }
 
     const render = () => {
-        document.querySelectorAll('#ackee-api-viewsToday').forEach((el) => {
-            el.innerHTML = viewsToday
-        })
+        for (const key in facts) {
+            document.querySelectorAll(`#ackee-api-${key}`).forEach((el) => {
+                el.innerHTML = facts[key]
+            })
+        }
     }
 
     try {
         const response = await fetch('/api/ackee')
 
-        if (response.ok === false) {
-            viewsToday = '-'
-        }
-        else {
+        if (response.ok === true) {
             const json = await response.json()
-            viewsToday = json.facts.viewsToday
+            facts = json.facts
         }
-        render(
 
-        )
+        render()
     } catch (err) {
-        viewsToday = '-'
         render()
         throw err
     }
-
-
 }
 
-document.querySelectorAll('#ackee-api-refresh-viewsToday').forEach((el) => {
+document.querySelectorAll('#ackee-api-refresh').forEach((el) => {
     el.addEventListener('click', () => {
-        document.querySelectorAll('#ackee-api-viewsToday').forEach((el) => {
+        document.querySelectorAll('.ackee-api').forEach((el) => {
             el.innerHTML = '-'
         })
         updateAckeeAPI()

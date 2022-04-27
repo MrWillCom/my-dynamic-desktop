@@ -2,6 +2,7 @@
   position: fixed;
   left: 240px;
   top: 360px;
+  display: flex;
 }
 
 .indicators > .indicator {
@@ -14,6 +15,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 0 3px;
 }
 
 .indicators > .indicator:hover {
